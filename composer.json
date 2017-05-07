@@ -1,0 +1,24 @@
+{
+    "name": "kiss/jsphp",
+    "description": "A library providing javascript like prototype based OO functionality",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Milko Kosturkov",
+            "email": "mkosturkov@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "KISS\\JSPHP\\": "src/",
+            "KISS\\JSPHP\\Test\\": "test/"
+        }
+    }
+}
