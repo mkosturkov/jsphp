@@ -27,8 +27,13 @@ class FunctionObject extends Object
     {
         $instance = new Object($this->prototype);
         $instance->constructor = $this;
-        $binded = $this->function->bindTo($instance);
-        call_user_func_array($binded, $arguments);
+        $this->apply($instance, $arguments);
         return $instance;
+    }
+    
+    public function apply($newThis, $arguments)
+    {
+        $binded = $this->function->bindTo($newThis);
+        return call_user_func_array($binded, $arguments);
     }
 }
